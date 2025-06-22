@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Inscrição</title>
+    <title>Formulário de Inscrição - Agência de Turismo</title>
     <link rel="stylesheet" href="formulario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="formulario__conteiner">
@@ -30,7 +30,10 @@
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" maxlength="800" required placeholder="Escreva sua mensagem"></textarea>
             </div>
-            <button type="submit" class="formulario__botao--enviar">Enviar</button>
+            <div class="formulario__botoes">
+                <button type="button" class="formulario__botao--anexar"><i class="fa-solid fa-paperclip"></i> Anexar</button>
+                <button type="submit" class="formulario__botao--enviar"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+            </div>
         </form>
     </div>
 </body>
