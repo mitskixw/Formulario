@@ -1,14 +1,30 @@
+:root {
+    --cor-primaria: #003087;
+    --cor-secundaria: #0F4C75;
+    --cor-fundo-formulario: #D9EDF7;
+    --cor-fundo-pagina: #F5F7F8;
+    --fonte-principal: Georgia, 'Times New Roman', Times, serif;
+    --tamanho-fonte-base: 16px;
+    --tamanho-fonte-media: 14px;
+    --tamanho-fonte-pequena: 12px;
+    --espacamento-padrao: 10px;
+    --espacamento-botao: 12px;
+    --arredondamento-borda: 5px;
+    --sombra-padrao: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --sombra-foco: 0 0 5px rgba(0, 48, 135, 0.3);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--fonte-principal);
 }
 
 /* Padrão BEM para classes ==> block__element--modifier */
 
 body {
-    background-color: #F5F7F8;
+    background-color: var(--cor-fundo-pagina);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,23 +32,23 @@ body {
 }
 
 .formulario__conteiner {
-    background-color: #D9EDF7;
+    background-color: var(--cor-fundo-formulario);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--arredondamento-borda);
+    box-shadow: var(--sombra-padrao);
     max-width: 500px;
     width: 100%;
 }
 
 .formulario__conteiner h1 {
     text-align: center;
-    color: #003087;
-    margin-bottom: 10px;
+    color: var(--cor-primaria);
+    margin-bottom: var(--espacamento-padrao);
 }
 
 .formulario__conteiner p {
     text-align: center;
-    color: #0F4C75;
+    color: var(--cor-secundaria);
     margin-bottom: 20px;
 }
 
@@ -43,17 +59,17 @@ body {
 .formulario__grupo label {
     display: block;
     font-weight: bold;
-    color: #003087;
+    color: var(--cor-primaria);
     margin-bottom: 5px;
 }
 
 .formulario__grupo input,
 .formulario__grupo textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #0F4C75;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: var(--espacamento-padrao);
+    border: 1px solid var(--cor-secundaria);
+    border-radius: var(--arredondamento-borda);
+    font-size: var(--tamanho-fonte-base);
 }
 
 .formulario__grupo textarea {
@@ -65,24 +81,24 @@ body {
 .formulario__grupo input:focus,
 .formulario__grupo textarea:focus {
     outline: none;
-    border-color: #003087;
-    box-shadow: 0 0 5px rgba(0, 48, 135, 0.3);
+    border-color: var(--cor-primaria);
+    box-shadow: var(--sombra-foco);
 }
 
 .formulario__botao--enviar {
     width: 100%;
-    padding: 12px;
-    background-color: #003087;
-    color: #F5F7F8;
+    padding: var(--espacamento-botao);
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-pagina);
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: var(--arredondamento-borda);
+    font-size: var(--tamanho-fonte-base);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .formulario__botao--enviar:hover {
-    background-color: #0F4C75;
+    background-color: var(--cor-secundaria);
 }
 
 @media (max-width: 768px) {
@@ -95,11 +111,11 @@ body {
     }
     .formulario__grupo input,
     .formulario__grupo textarea {
-        font-size: 14px;
+        font-size: var(--tamanho-fonte-media);
     }
     .formulario__botao--enviar {
-        font-size: 14px;
-        padding: 10px;
+        font-size: var(--tamanho-fonte-media);
+        padding: var(--espacamento-padrao);
     }
 }
 
@@ -112,18 +128,18 @@ body {
         font-size: 20px;
     }
     .formulario__conteiner p {
-        font-size: 14px;
+        font-size: var(--tamanho-fonte-media);
     }
     .formulario__grupo label {
-        font-size: 14px;
+        font-size: var(--tamanho-fonte-media);
     }
     .formulario__grupo input,
     .formulario__grupo textarea {
-        font-size: 12px;
+        font-size: var(--tamanho-fonte-pequena);
         padding: 8px;
     }
     .formulario__botao--enviar {
-        font-size: 12px;
+        font-size: var(--tamanho-fonte-pequena);
         padding: 8px;
     }
     .formulario__grupo textarea {
